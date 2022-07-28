@@ -14,8 +14,8 @@ window:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
-  size: 14
+    family: FantasqueSansMono Nerd Font
+  size: 18
 
 live_config_reload: true
 
