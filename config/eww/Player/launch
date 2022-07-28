@@ -1,0 +1,18 @@
+#!/bin/bash
+
+FILE="$HOME/.cache/eww_launch.player"
+CFG="$HOME/.config/eww/"
+EWW=`which eww`
+
+
+run_eww() {
+    ${EWW} -c "$CFG" open player
+  }
+
+if [[ ! -f "$FILE" ]]; then
+	touch "$FILE"
+	run_eww
+else
+	${EWW} -c "$CFG" close player
+	rm "$FILE"
+fi
