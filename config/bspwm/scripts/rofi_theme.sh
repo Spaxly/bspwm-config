@@ -1,6 +1,7 @@
 #!/bin/bash
 
 config="$HOME/.config/bspwm/rofi/launch.sh"
+powermenu="$HOME/.config/bspwm/rofi/theme.sh"
 
 declare -a options=(
   "latte"
@@ -16,19 +17,29 @@ choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i -l 6 -p 'Rofi Themes' -t
 case $choice in
   'latte')
     echo "rofi -show drun -theme ~/.config/bspwm/rofi/themes/catppuccin-latte.rasi" > $config
-    chmod +x $config ;;
+    echo "rofi -show p -modi p:rofi-power-menu -theme ~/.config/bspwm/rofi/themes/catppuccin-latte.rasi" > $powermenu
+    chmod +x $config 
+    chmod +x $powermenu ;;
   'frappe')
     echo "rofi -show drun -theme ~/.config/bspwm/rofi/themes/catppuccin-frappe" > $config 
-    chmod +x $config ;;
+    echo "rofi -show p -modi p:rofi-power-menu -theme ~/.config/bspwm/rofi/themes/catppuccin-frappe.rasi" > $powermenu
+    chmod +x $config 
+    chmod +x $powermenu ;;
   'mocha')
     echo "rofi -show drun -theme ~/.config/bspwm/rofi/themes/catppuccin-mocha.rasi" > $config
-    chmod +x $config ;;
+    echo "rofi -show p -modi p:rofi-power-menu -theme ~/.config/bspwm/rofi/themes/catppuccin-mocha.rasi" > $powermenu
+    chmod +x $config 
+    chmod +x $powermenu ;;
   'macchiato')
     echo "rofi -show drun -theme ~/.config/bspwm/rofi/themes/catppuccin-macchiato.rasi" > $config
-    chmod +x $config ;;
+    echo "rofi -show p -modi p:rofi-power-menu -theme ~/.config/bspwm/rofi/themes/catppuccin-macchiato.rasi" > $powermenu
+    chmod +x $config 
+    chmod +x $powermenu ;;
   'saga')
     echo "rofi -show drun -theme ~/.config/bspwm/rofi/themes/saga.rasi" > $config
-    chmod +x $config ;;
+    echo "rofi -show p -modi p:rofi-power-menu -theme ~/.config/bspwm/rofi/themes/saga.rasi" > $powermenu
+    chmod +x $config 
+    chmod +x $powermenu ;;
   'quit')
     echo "No theme chosen" && exit 1 ;;
 esac

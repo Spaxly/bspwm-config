@@ -14,7 +14,7 @@ super + shift + f
   firefox
 
 super + shift + p
-  rofi -show p -modi p:rofi-power-menu -theme $HOME/.config/bspwm/rofi/themes/catppuccin-mocha.rasi
+  ~/.config/bspwm/rofi/theme.sh
 
 super + shift + d
   nemo
